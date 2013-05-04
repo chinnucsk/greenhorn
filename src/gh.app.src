@@ -1,0 +1,27 @@
+{application, gh,
+ [
+  {description, "Greenhorn - An experimental REST API framework"},
+  {vsn, "0.0.1"},
+  {registered, [gh_sup]},
+  {applications, [
+                  kernel,
+                  stdlib,
+                  syntax_tools,
+                  crypto,
+                  public_key,
+                  ssl,
+                  compiler,
+                  lager,
+                  ranch,
+                  cowboy,
+                  jiffy,
+                  reloader
+                 ]},
+  {mod, {gh_app, []}},
+  {env, [
+         {gh_port,          8080},
+         {gh_num_acceptors, 100}
+        ]
+  }
+ ]
+}.
